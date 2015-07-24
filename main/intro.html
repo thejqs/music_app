@@ -1,0 +1,102 @@
+<html>
+<head>
+
+<style>
+        #square {
+                        border: 1px solid #000; 
+                        width: 100px;
+                        height: 100px;
+                        margin: 50px auto 50px auto;
+        }
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="square"></div>
+
+<a class="colorswitch" id="red" href="#">Red</a>
+<a class="colorswitch" id="blue" href="#">Blue</a>
+<a class="colorswitch" id="green" href="#">Green</a>
+<a class="colorswitch" id="yellow" href="#">Yellow</a>
+
+
+<!-- // <div id="one">
+
+//         <div class="box">One</div>
+//         <div class="box">Two</div>
+//         <div class="box">Three</div>
+
+// </div>
+
+
+// <div id="two">
+//         <div class="box">One</div>
+//         <div class="box">Two</div>
+//         <div class="box">Three</div>
+
+// </div>
+
+
+// <div id="three">
+//         <div class="box">One</div>
+//         <div class="box">Two</div>
+//         <div class="box">Three</div>
+
+// </div> -->
+
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+
+            //document.getElementById("red").addEventListener("click", function(){
+            //    document.getElementById("square").style.backgroundColor = "red";
+            //});
+            //document.getElementById("blue").addEventListener("click", function(){
+            //    document.getElementById("square").style.backgroundColor = "blue";
+            //});
+            //document.getElementById("green").addEventListener("click", function(){
+            //    document.getElementById("square").style.backgroundColor = "green";
+            //});
+            //document.getElementById("yellow").addEventListener("click", function(){
+            //    document.getElementById("square").style.backgroundColor = "yellow";
+            //});
+
+
+            switchSquare('purple')
+
+            var switches = $('.colorswitch')//.getElementsByClassName('colorswitch');
+
+            switches.click(function(){
+                var color = this.id;
+                switchSquare(color);
+
+            })
+
+            // for (var i = 0; i < switches.length; i += 1) {
+            //     var colorSwitch = switches[i];
+            //     colorSwitch.addEventListener('mouseenter', function(){
+
+            //         var color = this.id;
+            //         switchSquare(color);
+
+            //     });
+            // }
+
+            function switchSquare(color) {
+                    $('#square').css({backgroundColor: color}).html(color);
+                    // document.getElementById('square').style.backgroundColor = color;
+                    // $('#square').html(color);
+            }
+
+            
+
+
+
+        </script>
+
+</body>
+</html>

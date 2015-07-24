@@ -1,0 +1,30 @@
+<form method="post" action="/register/">
+{% csrf_token %}
+
+{{ form.email.label_tag}}
+
+{{ form.email }}
+
+</br>
+</br>
+
+
+{{ form.password1.label_tag}}
+
+{{ form.password1 }}
+
+</br>
+</br>
+
+{{ form.password2.label_tag}}
+
+{{ form.password2 }}
+
+</br>
+</br>
+
+<input type="submit" value="You're sure. You're really, really sure?">
+
+</form>
+
+{{ form.errors }}

@@ -1,0 +1,17 @@
+
+
+<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+
+{% csrf_token %}
+
+{{ form.username }}
+
+</br>
+
+{{ form.password }}
+
+<input type="submit" value="Are you worthy?">
+
+</form>
+
+{{ form.errors }}

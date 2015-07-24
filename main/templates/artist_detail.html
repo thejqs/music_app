@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<h3>{{ artist.artist_name }}</h3>
+
+{{ artist.artist.bio|safe }}
+
+</br>
+
+<img src="/media/{{ artist.artist_image}}" alt="">
+
+</br>
+
+{{ artist.albums_set.all }}
+
+<a href="{{ artist.artist_url }}">The homepage of {{ artist.artist_name }}</a>
