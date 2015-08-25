@@ -20,7 +20,7 @@ response = requests.get('http://freemusicarchive.org/api/get/artists.json', para
 
 response_dict = response.json()
 
-print response_dict['dataset'][0].keys()
+# print response_dict['dataset'][0].keys()
 
 for data in response_dict['dataset']:
     artist, created = Artists.objects.get_or_create(artist_id=data.get('artist_id'))

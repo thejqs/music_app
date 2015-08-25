@@ -1,13 +1,13 @@
 from django.db import models
 from django.db.models import signals
 
-from django.utils import timezone  
-from django.utils.http import urlquote  
-from django.core.mail import send_mail  
+from django.utils import timezone
+from django.utils.http import urlquote
+from django.core.mail import send_mail
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 
 
-class CustomUserManager(BaseUserManager):  
+class CustomUserManager(BaseUserManager):
     def _create_user(self, email, password, is_staff, is_superuser, **extra_fields):
         now = timezone.now()
         if not email:
